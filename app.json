@@ -1,0 +1,12 @@
+{
+  "name": "MeetupRSVPProject",
+  "displayName": "MeetupRSVPProject",
+  "expo": {
+    "name": "MeetupRSVPProject",
+    "slug": "MeetupRSVPProject",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
