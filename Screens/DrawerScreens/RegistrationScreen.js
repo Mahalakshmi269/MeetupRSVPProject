@@ -75,7 +75,7 @@ const RegistrationScreen = () => {
     var dataToSend = {
       name: userName,
       age: userAge,
-      dob: userDob,
+      dob: dobToJSDateObject(),
       profession: userProfession,
       locality: userLocality,
       noOfGuests: userNoOfGuests,
@@ -128,6 +128,11 @@ const RegistrationScreen = () => {
         </Text>
       </View>
     );
+  }
+
+  dobToJSDateObject = () => {
+    let [year, month, date] = userDob.split(" ")
+    userDob = new Date(year, month, date);
   }
 
   return (
