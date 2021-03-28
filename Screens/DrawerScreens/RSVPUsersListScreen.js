@@ -1,3 +1,7 @@
+//Second screen in the drawer should have a searchable list of all the RSVP'd users
+//The list can have the name and locality of the RSVP’d user. The entire list should be searchable with a single text input by the user’s locality and name. 
+//Clicking an user in the list will open a new screen that contains all the details collected in the first form.
+
 import React, {useState, useEffect} from 'react';
 
 import {
@@ -56,7 +60,7 @@ const RSVPUsersListScreen = () => {
     );
   };
 
-
+  //Navigation of Detials Screen, onPress of searched list item
   const getItem = (item) => {
     this.props.navigation.navigate('DetailsScreen', {userDetails: item});
   };

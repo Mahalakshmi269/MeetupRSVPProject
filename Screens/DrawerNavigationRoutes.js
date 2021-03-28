@@ -6,7 +6,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 // Import Screens
 import RegistrationScreen from './DrawerScreens/RegistrationScreen';
-import DetailsScreen from './DrawerScreens/DetailsScreen';
+import RSVPUsersListScreen from './DrawerScreens/RSVPUsersListScreen';
 import ReportsScreen from './DrawerScreens/ReportsScreen';
 import CustomSidebarMenu from './Components/CustomSidebarMenu';
 import NavigationDrawerHeader from './Components/NavigationDrawerHeader';
@@ -38,10 +38,10 @@ const registrationScreenStack = ({navigation}) => {
   );
 };
 
-const detailsScreenStack = ({navigation}: Props) => {
+const RSVPUsersListScreenStack = ({navigation}: Props) => {
   return (
     <Stack.Navigator
-      initialRouteName="DetailsScreen"
+      initialRouteName="RSVPUsersListScreen"
       screenOptions={{
         headerLeft: () => (
           <NavigationDrawerHeader navigationProps={navigation} />
@@ -55,17 +55,17 @@ const detailsScreenStack = ({navigation}: Props) => {
         },
       }}>
       <Stack.Screen
-        name="DetailsScreen"
-        component={DetailsScreen}
+        name="RSVPUsersListScreen"
+        component={RSVPUsersListScreen}
         options={{
-          title: 'Details', 
+          title: 'RSVP Users List Screen', 
         }}
       />
     </Stack.Navigator>
   );
 };
 
-const detailsScreenStack = ({navigation}: Props) => {
+const RSVPUsersListScreenStack = ({navigation}: Props) => {
   return (
     <Stack.Navigator
       initialRouteName="ReportsScreen"
@@ -112,9 +112,9 @@ const DrawerNavigatorRoutes = <props: Props> => {
         component={registrationScreenStack}
       />
       <Drawer.Screen
-        name="detailsScreenStack"
-        options={{drawerLabel: 'Details Screen'}}
-        component={detailsScreenStack}
+        name="RSVPUsersListScreenStack"
+        options={{drawerLabel: 'RSVP Users List Screen'}}
+        component={RSVPUsersListScreenStack}
       />
       <Drawer.Screen
         name="reportsScreenStack"
